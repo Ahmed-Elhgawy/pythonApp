@@ -1,0 +1,29 @@
+name: devops-app
+
+labels:
+  app: python
+
+pod:
+  image: elhgawy/python
+  tag: devopsapp
+  pullPolicy: IfNotPresent
+
+env:
+  DB_NAME: webapp_db
+  DB_USER: root
+  DB_PASSWD: rootdb123
+  DB_HOST: terraform-20240127131117713000000001.cbk5es00hcks.us-east-1.rds.amazonaws.com
+
+resources:
+  limits:
+    mem: "512Mi"
+    cpu: "1"
+  requests:
+    mem: "128Mi"
+    cpu: "500m"
+
+appPort:
+  name: http
+  port: 80
+
+serviceType: ClusterIP
