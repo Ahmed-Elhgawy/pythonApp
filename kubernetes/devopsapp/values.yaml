@@ -5,7 +5,6 @@ labels:
 
 pod:
   image: elhgawy/python
-  tag: devopsapp
   pullPolicy: IfNotPresent
 
 env:

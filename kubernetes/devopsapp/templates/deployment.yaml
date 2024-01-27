@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: {{ .Values.name }}-container
-        image: {{ .Values.pod.image }}:{{ .Values.pod.tag }}
+        image: {{ .Values.pod.image }}
         imagePullPolicy: {{ .Values.pod.pullPolicy }}
         env:
         {{- with .Values.env }}
