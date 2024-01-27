@@ -26,7 +26,7 @@ pipeline {
         stage('install application using helm') {
             steps {
                 withCredentials([string(credentialsId: 'DB_HOST', variable: 'HOST'), string(credentialsId: 'DB_PASSWD', variable: 'PASSWD')]) {
-                    sh "helm upgrade --install python-app kubernetes/devopsapp --set pod.image=elhgawy/python:app${BUILD_ID} --set DB_HOST=${HOST} --set DB_PASSWD=${PASSWD} -n default"
+                    sh "helm upgrade --install python-app kubernetes/devopsapp --set pod.image=elhgawy/python:app${BUILD_ID},DB_HOST=${HOST},DB_PASSWD=${PASSWD} -n default"
                 }
                 
             }
