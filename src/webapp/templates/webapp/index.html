@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'webapp/css/index.css'%}">
+
+    <title>DevOps</title>
+</head>
+<body>
+    <div>
+       <h1>Welcome to DevOps.App!</h1>
+        <table>
+            <tr>
+                <td><h3>Your Public IP</h3></td>
+                <td><b>{{public_ip}}</b></td>
+            </tr>
+        </table>
+        <a href="{% url 'all' %}">See All</a> 
+    </div>
+    
+</body>
+</html>

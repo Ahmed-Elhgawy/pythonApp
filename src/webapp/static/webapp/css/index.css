@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Lato', sans-serif;
+}
+
+div {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+h1 {
+    margin: 3.5px;
+    padding: 0;
+    font-size: 70px;
+    color: #00ECEA;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+table {
+    margin: 3.5px;
+    padding: 0;
+}
+
+h3 {
+    color: #002E3E;
+    padding-right: 7px;
+    margin: 0;
+    font-family: 'Dancing Script', cursive;
+}
+
+b {
+    color: #B2E8EE;
+    font-size: 1.17em;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    display: inline-block;
+    font-family: 'Dancing Script', cursive;
+    margin: 2.5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    color: #B2E8EE;
+    background-color: #002E3E;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+a:hover {
+    box-shadow: none;
+}
