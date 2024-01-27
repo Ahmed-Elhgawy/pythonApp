@@ -13,7 +13,7 @@ pipeline {
        stage('build docker image') {
             steps {
                 sh "docker build . -t python:app"
-                sh "docker tag node:app elhgawy/python:app${BUILD_ID}"
+                sh "docker tag python:app elhgawy/python:app${BUILD_ID}"
                 sh "docker push elhgawy/python:app${BUILD_ID}"                
             }
         }
