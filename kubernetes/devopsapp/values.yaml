@@ -10,8 +10,8 @@ pod:
 env:
   DB_NAME: webapp_db
   DB_USER: root
-  DB_PASSWD: rootdb123
-  DB_HOST: terraform-20240127131117713000000001.cbk5es00hcks.us-east-1.rds.amazonaws.com
+  DB_PASSWD: ""
+  DB_HOST: ""
 
 resources:
   limits:
