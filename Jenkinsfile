@@ -14,7 +14,6 @@ pipeline {
             steps {
                 sh "docker build . -t python:app"
                 sh "docker tag python:app elhgawy/python:app${BUILD_ID}"
-                sh "docker push elhgawy/python:app${BUILD_ID}"                
             }
         }
 
@@ -26,8 +25,8 @@ pipeline {
 
         stage('install application using helm') {
             steps {
-                withCredentials([string(credentialsId: 'DB_HOST', variable: 'DB_HOST'), string(credentialsId: 'DB_PASSWD', variable: 'DB_PASSWD')]) {
-                    sh "helm install python-app kubernetes/devopsapp --set pod.image=elhgawy/python:app${BUILD_ID} --set DB_HOST=${DB_HOST} --set DB_PASSWD=${DB_PASSWD}"
+                withCredentials([string(credentialsId: 'DB_HOST', variable: 'HOST'), string(credentialsId: 'DB_PASSWD', variable: 'PASSWD')]) {
+                    sh "helm install python-app kubernetes/devopsapp --set pod.image=elhgawy/python:app${BUILD_ID} --set DB_HOST=${HOST} --set DB_PASSWD=${PASSWD}"
                 }
                 
             }
